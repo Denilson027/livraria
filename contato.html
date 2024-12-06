@@ -23,9 +23,27 @@
         </nav>
     </header>
 
-    <section>
-        
-    </section>
+    <article>
+        <h1>Formulário de Contato</h1>
+        <section class="contato">
+            <form id="form1" action="enviacontato.php" method="post">
+                <div>
+                  <label for="">Nome:</label>
+                  <input type="text" name="nome" id="nome" required/>
+                </div>
+                <div>
+                  <label for="">E-mail:</label>
+                  <input type="email" name="email" id="email" required/>
+                </div>
+                <div>
+                    <label for="">Comentário</label>
+                    <textarea name="comentario" id="comentario" rows="8"></textarea>
+                  </div>
+                  <div>
+                      <input type="submit" name="enviar" id="enviar" value="Enviar Formulário">
+                    </div>
+          </section>
+    </article>
 
     <footer>
         <div class="creditos">
