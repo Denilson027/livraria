@@ -9,23 +9,19 @@
 
 <body>
 
-    <header>
+    <header class="container">
         <nav>
-            <div class="logo">
-                <h1>Livraria ABC</h1>
+            <div>
+                <a href="index.html">
+                <h1 class="title">Livraria ABC</h1>
+                </a>
             </div>
-            <span>
-                <a href="index.html">Home</a>
-                <a href="catalogo.html">Catalogo</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="contato.html">Contato</a>
-            </span>
         </nav>
     </header>
 
-    <article>
+    <article class="contato">
         <h1>Formulário de Contato</h1>
-        <section class="contato">
+        <section>
             <form id="form1" action="enviacontato.php" method="post">
                 <div>
                   <label for="">Nome:</label>
@@ -45,11 +41,24 @@
           </section>
     </article>
 
-    <footer>
-        <div class="creditos">
-            &copy; 2025 | Livraria ABC | Todos direitos reservados
+    <footer class="container" style="background-color: #000814;">
+        <div class="menu">
+          <a href="sobre.html">Sobre</a>
+          <a href="contato.html">Contato</a>
         </div>
-    </footer>
+        <div>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="https://www.youtube.com/" target="_blank"
+            ><i class="bi bi-youtube"></i
+          ></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="bi bi-instagram"></i
+          ></a>
+        </div>
+        <div>&copy; 2025 | Livraria ABC | Todos direitos reservados</div>
+      </footer>
 
 </body>
 </html>

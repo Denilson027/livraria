@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Monomakh&display=swap');
+
+
 
 * {
   margin: 0;
@@ -10,11 +13,6 @@
 
 :root {
   --branco: #fff;
-  --platinum: #d9dcd6;
-  --indigo: #16425b;
-  --sky_blue: #81c3d7;
-  --cerulean: #3a7ca5;
-  --lapis_lazuli: #2f6690;
   --alerta: #ff0000;
   --primario: #000814;
   --segundario: #001D3D;
@@ -26,16 +24,29 @@
 .container {
   width: 900px;
   /* max-width: 90vh; */
+  background-color: var(--primario);
   margin: auto;
   text-align: center;
-  padding-top: 10px;
   transition: transform .5s;
+  color: #eee
 }
 
- .nav{
-  background-color: var(--primario);
-  color: var(--branco);
-  /* width: 3000px; */
+/* TITULO LIVRARIA ABC */
+.title{
+  font-family: "Monomakh", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+header a{
+  text-decoration: none;
+}
+
+.container a{
+  color: #eee;
 }
 
 svg {
@@ -46,14 +57,20 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px;
   
 }
+
+/* BOTÃO DO CART */
 
 header .cart-icon {
   position: relative;
   cursor: pointer;
+  padding-top: 20px;
+  padding-right: 20px;
 }
+
+/* NOTIFICAÇÃO VERMELHA DO CART */
 
 header .cart-icon span {
   display: flex;
@@ -65,9 +82,11 @@ header .cart-icon span {
   color: var(--branco);
   border-radius: 50%;
   position: absolute;
-  top: 50%;
-  right: -20%;
+  top: 65%;
+  right: 25%;
 }
+
+/* LISTA DOS LIVROS */
 
 .listProduct .item img{
   width: 90%;
@@ -79,6 +98,7 @@ header .cart-icon span {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+  /* background-color: gray; */
 }
 
 .listProduct .item{
@@ -107,6 +127,8 @@ header .cart-icon span {
   cursor: pointer;
 }
 
+/* TAB DO CARRINHO */
+
 .cartTab {
   width: 400px;
   background-color: #353432;
@@ -116,6 +138,9 @@ header .cart-icon span {
   display: grid;
   grid-template-rows: 70px 1fr 70px;
   transition: .5s;
+  h1{
+    font-family: "Monomakh", serif;
+  }
 }
 
 body.showCart .cartTab {
@@ -140,7 +165,7 @@ body.showCart .container{
 }
 
 .cartTab .btn button {
-  background-color: yellow;
+  background-color: var(--quarto);
   border: none;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
@@ -149,11 +174,12 @@ body.showCart .container{
 }
 
 .cartTab .btn .close {
-  background-color: #eee;
+  background-color: var(--branco);
 }
 
 .cartTab .listCart .item img {
   width: 100%;
+  padding-left: 5px;
 }
 
 .cartTab .listCart .item {
@@ -162,15 +188,16 @@ body.showCart .container{
   gap: 10px;
   text-align: center;
   align-items: center;
+  font-family: "Monomakh", serif;
 }
 
 .listCart .qt span {
   display: inline-block;
   width: 25px;
   height: 25px;
-  background-color: #eee;
+  background-color: var(--quinto);
   color: #555;
-  border-radius: 50%;
+  border-radius: 20%;
   cursor: pointer;
 }
 
@@ -191,10 +218,12 @@ body.showCart .container{
   width: 0;
 }
 
+/* CORPO DO HTML */
+
 html,
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--branco);
+  /* background-color: gray; */
   height: 100%;
   margin: 0;
   transition: transform .5s;
@@ -219,38 +248,11 @@ section {
   flex: 1;
 }
 
-/* CATALOGO */
-.livro {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 80px;
-  .cata {
-    width: 20%;
-    margin-bottom: 30px;
-    text-align: center;
-    background-color: var(--sky_blue);
-    padding: 15px 0px;
-    img {
-      border: 7px 7px 0px 0px;
-      width: 40%;
-    }
-    h3 {
-      padding-bottom: 5px;
-    }
-    p {
-      font-weight: 300;
-    }
-    a {
-      color: black;
-      text-decoration: none;
-    }
-  }
-}
-
 /* FORMULÁRIO */
 
 .contato {
+  padding-top: 20px;
+  padding-left: 180px;
   label {
     display: block;
     text-transform: uppercase;
@@ -260,7 +262,7 @@ section {
   input[type="email"],
   textarea {
     padding: 10px;
-    width: 100%;
+    width: 70%;
     border-radius: 5px;
     border: 1px solid var(--segundario);
     background-color: transparent;
@@ -276,15 +278,23 @@ section {
     margin-top: 30px;
   }
   input[type="submit"]:hover {
-    background-color: var(--cerulean);
+    background-color: var(--quarto);
     color: var(--branco);
   }
 }
 
 /* FOOTER */
 
-footer {
-  /* width: 100%; */
+footer{
+  padding: 20px;
+  text-indent: 10px;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+
+/* footer {
+  width: 100%;
   padding: 30px;
   background-color: var(--primario);
   font-size: 1.3rem;
@@ -298,7 +308,7 @@ footer {
     color: var(--branco);
     text-decoration: none;
   }
-}
+} */
 
 @media screen and (max-width: 992px) {
   .listProduct{
